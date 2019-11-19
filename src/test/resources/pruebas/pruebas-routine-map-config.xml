@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routineMapConfig>
+	<routineDefs>
+		<routineDef name="PSTL009">
+			<inputMap>
+				<parameter property="poliza" javaType="String" size="8" />
+				<parameter property="fecha" javaType="String" size="8" />
+			</inputMap>
+			<resultMap nameClass="com.jaruiz.examples.socket.socketclient.PSTL009Out">
+				<parameter property="estado" javaType="String" size="4" />
+			</resultMap>
+		</routineDef>					
+	</routineDefs>
+</routineMapConfig>

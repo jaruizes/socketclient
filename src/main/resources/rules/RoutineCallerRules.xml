@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE digester-rules PUBLIC
+		"-//Apache Commons //DTD digester-rules XML V1.0//EN"
+		"http://commons.apache.org/digester/dtds/digester-rules-3.0.dtd">
+<digester-rules>
+	<pattern value="routineMapConfig/routineDefs">
+		<object-create-rule classname="com.jaruiz.examples.socket.socketclient.definitions.impl.RoutineDefs" />
+		<set-properties-rule />
+		<pattern value="routineDef">
+			<object-create-rule	classname="com.jaruiz.examples.socket.socketclient.definitions.impl.RoutineDef" />
+			<set-properties-rule />
+			<set-next-rule methodname="addRoutine" />
+		</pattern>
+	</pattern>
+	
+	<pattern value="*/inputMap">
+		<object-create-rule classname="com.jaruiz.examples.socket.socketclient.definitions.impl.InputMap" />
+		<set-properties-rule />
+		<set-next-rule methodname="setInputMap" />
+	</pattern>
+	
+	<pattern value="*/resultMap">
+		<object-create-rule
+			classname="com.jaruiz.examples.socket.socketclient.definitions.impl.ResultMap" />
+		<set-properties-rule />
+		<set-next-rule methodname="setResultMap" />
+	</pattern>
+	
+	<pattern value="*/parameter">
+		<object-create-rule classname="com.jaruiz.examples.socket.socketclient.definitions.impl.Parameter" />
+		<set-properties-rule />
+		<set-next-rule methodname="addParameter" />
+	</pattern>
+
+</digester-rules>
